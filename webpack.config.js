@@ -1,5 +1,7 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -12,8 +14,7 @@ const isProduction = !isDevelopment;
 const filename = (ext) => (isDevelopment ? `[name].${ext}` : `[name].[hash].${ext}`);
 
 const cssLoaders = (extra) => {
-  const loaders = [
-    {
+  const loaders = [{
       loader: MiniCssExtractPlugin.loader,
       options: {
         hmr: isDevelopment,
@@ -51,12 +52,10 @@ const plugins = () => {
         collapseWhitespace: isProduction,
       },
     }),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, 'src/favicon.ico'),
-        to: path.resolve(__dirname, 'dist'),
-      },
-    ]),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, 'src/favicon.ico'),
+      to: path.resolve(__dirname, 'dist'),
+    }, ]),
     new MiniCssExtractPlugin({
       filename: filename('css'),
     }),
@@ -77,12 +76,10 @@ const babelOptions = (preset) => {
 };
 
 const jsLoaders = () => {
-  const loaders = [
-    {
-      loader: 'babel-loader',
-      options: babelOptions(),
-    },
-  ];
+  const loaders = [{
+    loader: 'babel-loader',
+    options: babelOptions(),
+  }, ];
 
   if (isDevelopment) {
     loaders.push('eslint-loader');
@@ -111,11 +108,14 @@ module.exports = {
   devServer: {
     port: 1586,
     hot: isDevelopment,
+    inline: isDevelopment,
+    contentBase: path.resolve(__dirname, "src"),
+    watchContentBase: true,
+    compress: true
   },
   plugins: plugins(),
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.html$/,
         loader: 'html-loader',
       },
