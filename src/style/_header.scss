@@ -1,2 +1,50 @@
 @import 'variables';
 @import 'mixins';
+
+.header {
+    height: 7.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent-color;
+    padding: 0 2rem;
+
+    &__title {
+        margin: 0;
+        flex-grow: 1;
+        text-align: center;
+        color: $white-color;
+        text-transform: uppercase;
+        font-size: 1.9rem;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 2.4rem;
+        letter-spacing: -0.03em;
+    }
+
+    &__title-star {
+        color: $secondary-color;
+    }
+
+}
+
+.burger {
+    @include burger();
+    position: relative;
+
+    &::before {
+        content: '';
+        @include burger(2.4rem);
+        position: absolute;
+        top: 0.6rem;
+        left: -1px;
+    }
+
+    &::after {
+        content: '';
+        @include burger(2.4rem);
+        position: absolute;
+        top: -0.8rem;
+        left: -1px;
+    }
+}
