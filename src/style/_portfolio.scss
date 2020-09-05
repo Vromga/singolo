@@ -1,2 +1,39 @@
 @import 'variables';
 @import 'mixins';
+
+.portfolio {
+    background-color: $accent-color;
+    padding: 4.2rem 2.5rem;
+
+    &__title {
+        margin: 0;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        color: $title-color;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        color: $text-color;
+    }
+
+    &__btn {
+        background-color: $accent-color;
+        border: 0.1rem solid $text-color;
+        border-radius: 0.5rem;
+        color: $text-color;
+        padding: 0.5rem;
+        margin: 0 1rem 1 rem 0;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        text-align: center;
+    }
+}
