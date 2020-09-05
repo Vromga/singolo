@@ -8,8 +8,8 @@
     &__title {
         font-style: normal;
         font-weight: 900;
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 3rem;
+        line-height: 3.6rem;
         margin: 0;
         color: $title-color;
     }
@@ -17,8 +17,36 @@
     &__text {
         font-style: normal;
         font-weight: 300;
-        font-size: 18px;
-        line-height: 30px;
+        font-size: 1.8rem;
+        line-height: 3rem;
         color: $text-color;
+    }
+
+    &__list {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+
+        &_title {
+            color: $title-color;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+            margin: 0 0 0.7rem;
+        }
+
+        &_text {
+            color: $text-color;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+            text-align: justify;
+        }
+    }
+
+    &__img {
+        margin-right: 1rem;
     }
 }
