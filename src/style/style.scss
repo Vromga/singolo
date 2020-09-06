@@ -1,1 +1,19 @@
 @import '~normalize.css';
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'slider';
+@import 'services';
+@import 'portfolio';
+@import 'about';
+@import 'form';
+@import 'footer';
+
+html {
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
