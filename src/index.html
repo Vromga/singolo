@@ -16,7 +16,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#contact-id">contact</a></li>
         </ul>
       </nav>
       <h1 class="header__title">Singolo<span class="header__title-star">*</span></h1>
@@ -177,37 +177,38 @@
         porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
         condimentum nibh.
       </p>
-      <form action="#">
-        <input type="text" class="name" name="form-name" placeholder="Name (required)" required />
-        <input type="email" name="form-email" placeholder="Email (required)" required />
-        <input type="text" name="form-subject" placeholder="Subject" />
-        <textarea placeholder="Describe your project in detail..."></textarea>
-        <button type="submit">send</button>
+      <form action="#" class="form">
+        <input class="form__name" type="text" class="name" name="form-name" placeholder="Name (required)" required />
+        <input class="form__mail" type="email" name="form-email" placeholder="Email (required)" required />
+        <input class="form__subject" type="text" name="form-subject" placeholder="Subject" />
+        <textarea class="form__textarea" placeholder="Describe your project in detail..."></textarea>
+        <button class="form__btn" type="submit">send</button>
       </form>
-      <div class="get-a-quote__contact contact-info">
-        <h2 class="contact-info__title">Contact Information</h2>
-        <p class="contact-info__text">
+      <div class="get-a-quote__contact contact">
+        <h2 class="contact__title">Contact Information</h2>
+        <p class="contact__text">
           Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet
           volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
         </p>
-        <address id="contact">
-          <ul class="contact-info__list">
-            <li class="contact-info__elem">
+        <address id="contact-id" class="contact__adress">
+          <ul class="contact__list">
+            <li class="contact__elem">
               <a
-                class="contact-info__contact"
+                class="contact__contact"
                 href="https://www.google.com/maps/place/%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%A1%D0%A8%D0%90/@40.6976637,-74.1197637,11z/data=!4m5!3m4!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728"
                 target="blank"
-                ><img src="./assets/img/icon/ico-location.svg" alt="location icon" />Elm St. 14/05 Lost City</a
+                ><img class="contact__img" src="./assets/img/icon/ico-location.svg" alt="location icon" />Elm St. 14/05
+                Lost City</a
               >
             </li>
-            <li class="contact-info__elem">
-              <a class="contact-info__contact" href="tel:035283318635"
-                ><img src="./assets/img/icon/ico-phone.svg" alt="phone icon" />03528 331 86 35</a
+            <li class="contact__elem">
+              <a class="contact__contact" href="tel:035283318635"
+                ><img class="contact__img" src="./assets/img/icon/ico-phone.svg" alt="phone icon" />03528 331 86 35</a
               >
             </li>
-            <li class="contact-info__elem">
-              <a class="contact-info__contact" href="mailto:info@singolo.com"
-                ><img src="./assets/img/icon/ico-mail.svg" alt="mail icon" />info@singolo.com</a
+            <li class="contact__elem">
+              <a class="contact__contact" href="mailto:info@singolo.com"
+                ><img class="contact__img" src="./assets/img/icon/ico-mail.svg" alt="mail icon" />info@singolo.com</a
               >
             </li>
           </ul>
