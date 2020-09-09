@@ -2,46 +2,52 @@
 @import 'mixins';
 
 .slider {
-    position: relative;
-    background-color: $global-background;
+  max-width: 102rem;
+  position: relative;
+  background-color: $global-background;
 
-    &__img {
-        width: 100%;
-    }
+  &__img {
+    width: 100%;
+  }
 }
 
 .slide-left,
 .slide-right {
-    position: absolute;
-    width: 2.5rem;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    bottom: 0;
+  position: absolute;
+  width: 2.5rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
 }
 
 .slide-left {
-    .arrow-left {
-        background-image: url('./../assets/img/icon/arrow-left.svg');
-        width: 1.5rem;
-        height: 2.5rem;
-    }
-
-    &:hover {
-        background-color: #fff;
-    }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    filter: grayscale(50%);
+  }
+  .arrow-left {
+    background-image: url('./../assets/img/icon/arrow-left.svg');
+    width: 1.5rem;
+    height: 2.5rem;
+  }
 }
 
 .slide-right {
-    right: 0;
-
-    .arrow-right {
-        background-image: url('./../assets/img/icon/arrow-right.svg');
-        width: 1.5rem;
-        height: 2.5rem;
-    }
+  right: 0;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    filter: grayscale(50%);
+  }
+  .arrow-right {
+    background-image: url('./../assets/img/icon/arrow-right.svg');
+    width: 1.5rem;
+    height: 2.5rem;
+  }
 }
 
 // .arrow {

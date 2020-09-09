@@ -5,6 +5,12 @@
   background-color: $secondary-color;
   padding: 3rem;
   color: $form-text-color;
+  max-width: 1020px;
+  @media (min-width: 764px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   &__title {
     font-style: normal;
@@ -30,6 +36,10 @@
   justify-content: center;
   width: 100%;
 
+  @media (min-width: 764px) {
+    width: 66%;
+  }
+
   &__name,
   &__mail,
   &__subject,
@@ -48,6 +58,7 @@
   &__textarea {
     background-color: $form-field-bg;
     padding: 1.2rem 0.6rem;
+    font-size: 1.6rem;
 
     &::placeholder {
       font-style: normal;
@@ -58,7 +69,15 @@
     }
   }
 
+  &__textarea {
+    height: 20rem;
+  }
+
   &__btn {
+    @media (min-width: 764px) {
+      width: 13.6rem;
+      align-self: flex-start;
+    }
     background-color: #fbc65f;
     font-style: normal;
     font-weight: normal;
@@ -70,6 +89,17 @@
 }
 
 .contact {
+  @media (min-width: 764px) {
+    width: 22.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+  }
+  @media (min-width: 1020px) {
+    width: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__title {
     font-style: normal;
     font-weight: 900;
