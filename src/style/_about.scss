@@ -4,6 +4,13 @@
 .about {
   background-color: $global-background;
   padding: 3rem;
+  max-width: 102rem;
+
+  @media (min-width: 764px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   &__title {
     font-style: normal;
@@ -25,6 +32,12 @@
 
 .figure {
   margin: 0;
+  @media (min-width: 764px) {
+    max-width: 21.9rem;
+  }
+  @media (min-width: 1020px) {
+    max-width: 30rem;
+  }
 
   &__img {
     width: 100%;
