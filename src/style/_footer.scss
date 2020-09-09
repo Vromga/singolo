@@ -7,4 +7,23 @@
   justify-content: center;
   align-items: center;
   height: 7.6rem;
+  max-width: 102rem;
+  &__wrap {
+    display: flex;
+  }
+  @media (min-width: 764px) {
+    justify-content: space-between;
+    padding: 4rem;
+  }
+
+  &__copyright {
+    @media (max-width: 765px) {
+      display: none;
+    }
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 18px;
+    color: $title-color;
+  }
 }
