@@ -2,49 +2,134 @@
 @import 'mixins';
 
 .header {
-    height: 7.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-width: 102rem;
+  height: 7.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $accent-color;
+  padding: 0 2rem;
+  @media (max-width: 1019px) {
+    justify-content: space-between;
+    padding: 4rem;
+  }
+  &__title {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    color: $white-color;
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 2.4rem;
+    letter-spacing: -0.03em;
+
+    @media (min-width: 764px) {
+      text-align: left;
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__title-star {
+    @extend .header__title;
+    color: $secondary-color;
+  }
+}
+
+.navigation {
+  @media (max-width: 764px) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 75%;
     background-color: $accent-color;
-    padding: 0 2rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &__title {
-        margin: 0;
-        flex-grow: 1;
-        text-align: center;
+  @media (min-width: 765px) and (max-width: 1020px) {
+  }
+  &__list {
+    @include list-style;
+
+    @media (min-width: 765px) {
+      min-width: 37.1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__elem {
+    margin-bottom: 2.6rem;
+
+    @media (min-width: 765px) {
+      letter-spacing: -0.02rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      list-style: none;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      &:not(:last-child)::after {
+        content: '·';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.5em;
         color: $white-color;
-        text-transform: uppercase;
-        font-size: 1.9rem;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 2.4rem;
-        letter-spacing: -0.03em;
+        margin-left: 0.7rem;
+        padding-bottom: 1px;
+      }
     }
-
-    &__title-star {
-        color: $secondary-color;
+  }
+  &__link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    letter-spacing: -0.035em;
+    color: $white-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      color: $secondary-color;
     }
-
+    @media (min-width: 765px) {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: right;
+      letter-spacing: -0.035em;
+    }
+  }
 }
 
 .burger {
-    @include burger();
-    position: relative;
+  @include burger();
+  position: relative;
+  @media (min-width: 764px) {
+    display: none;
+  }
 
-    &::before {
-        content: '';
-        @include burger(2.4rem);
-        position: absolute;
-        top: 0.6rem;
-        left: -1px;
-    }
+  &::before {
+    content: '';
+    @include burger(2.4rem);
+    position: absolute;
+    top: 0.6rem;
+    left: -1px;
+  }
 
-    &::after {
-        content: '';
-        @include burger(2.4rem);
-        position: absolute;
-        top: -0.8rem;
-        left: -1px;
-    }
+  &::after {
+    content: '';
+    @include burger(2.4rem);
+    position: absolute;
+    top: -0.8rem;
+    left: -1px;
+  }
 }
