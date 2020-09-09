@@ -2,51 +2,60 @@
 @import 'mixins';
 
 .services {
-    background-color: $global-background;
-    padding: 2.5rem 3rem 1.5rem;
+  background-color: $global-background;
+  padding: 2.5rem 3rem 1.5rem;
+  @media (min-width: 764px) {
+    max-width: 102rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 
-    &__title {
-        font-style: normal;
-        font-weight: 900;
-        font-size: 3rem;
-        line-height: 3.6rem;
-        margin: 0;
-        color: $title-color;
+  &__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    margin: 0;
+    color: $title-color;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: $text-color;
+  }
+
+  &__list {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    @media (min-width: 764px) {
+      width: 30rem;
     }
 
-    &__text {
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1.8rem;
-        line-height: 3rem;
-        color: $text-color;
+    &_title {
+      color: $title-color;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      margin: 0 0 0.7rem;
     }
 
-    &__list {
-        margin-bottom: 1.5rem;
-        display: flex;
-        align-items: flex-start;
-
-        &_title {
-            color: $title-color;
-            font-style: normal;
-            font-weight: 900;
-            font-size: 1.8rem;
-            line-height: 1.8rem;
-            margin: 0 0 0.7rem;
-        }
-
-        &_text {
-            color: $text-color;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1.2rem;
-            line-height: 2.1rem;
-            text-align: justify;
-        }
+    &_text {
+      color: $text-color;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.2rem;
+      line-height: 2.1rem;
+      text-align: justify;
     }
+  }
 
-    &__img {
-        margin-right: 1rem;
-    }
+  &__img {
+    margin-right: 1rem;
+  }
 }
